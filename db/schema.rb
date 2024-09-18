@@ -23,6 +23,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_18_160254) do
   create_table "exams", force: :cascade do |t|
     t.string "title"
     t.string "description"
+    t.date "start"
+    t.date "end"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
