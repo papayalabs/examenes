@@ -6,7 +6,8 @@ Exámenes es una nueva funcionalidad mediante la cual, el administrador de la mi
 Diagrama UML 
 ===========================================================
 
-<img width="1200" alt="Screenshot 2024-09-18 at 6 23 56 PM" src="https://github.com/user-attachments/assets/1f0a80e5-1f02-4280-919a-8f50f73ffdef">
+<img width="1200" alt="Screenshot 2024-09-18 at 6 23 56 PM" src="https://github.com/user-attachments/assets/ce653c5a-9e72-47fd-bec6-c6a3c31f0104">
+
 
 
 Ir a http://localhost:3000/erd
