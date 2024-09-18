@@ -1,0 +1,23 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @question %>
+
+<h1>Answers</h1>
+
+<div id="answers">
+  <% @answers.each do |answer| %>
+    <%= render answer %>
+    <p>
+      <%= link_to "Show this answer", answer %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New answer", new_answer_path(question_id: @question.id) %>
+
+<div>
+  <%= link_to "Edit this question", edit_question_path(@question) %> |
+  <%= link_to "Back to questions", questions_path %>
+
+  <%= button_to "Destroy this question", @question, method: :delete %>
+</div>

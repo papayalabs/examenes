@@ -1,0 +1,23 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @exam %>
+
+<h1>Questions</h1>
+
+<div id="questions">
+  <% @questions.each do |question| %>
+    <%= render question %>
+    <p>
+      <%= link_to "Show this question", question %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New question", new_question_path(exam_id: @exam.id) %>
+
+<div>
+  <%= link_to "Edit this exam", edit_exam_path(@exam) %> |
+  <%= link_to "Back to exams", exams_path %>
+
+  <%= button_to "Destroy this exam", @exam, method: :delete %>
+</div>
