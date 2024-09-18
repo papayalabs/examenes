@@ -44,6 +44,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_18_160254) do
   create_table "user_answers", force: :cascade do |t|
     t.integer "user_id"
     t.integer "answer_id"
+    t.string "value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["answer_id"], name: "index_user_answers_on_answer_id"
@@ -72,4 +73,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_18_160254) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "user_answers", "answers"
+  add_foreign_key "user_answers", "users"
+  add_foreign_key "user_exams", "exams"
+  add_foreign_key "user_exams", "users"
 end
