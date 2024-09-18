@@ -25,6 +25,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_09_18_160254) do
     t.string "description"
     t.date "start"
     t.date "end"
+    t.boolean "is_completed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
