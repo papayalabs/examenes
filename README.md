@@ -22,7 +22,7 @@ Un(1) Question puede tener muchas(N) Answer
 
 Después se crean dos modelos para relacionar User(Usuarios) con Exam(Examen) y User(Usuarios) con Answer(Respuestas). Esto para se relacionen Muchos(N) a Muchas(N)
 
-Nota: Cuando el User(Usuarios) defina la Answer(Respuestas) no rellena el campo is_correct(boolean). Esto hace corroborar cual respuesta es correcta. Esta esquema sirve para los 3 tipos de preguntas: texto libre, multiples respuestas o una sola respuesta.
+Nota: Cuando el User(Usuarios) defina la Answer(Respuestas) define su respuesta en "value". Esto hace corroborar cual respuesta es correcta. Esta esquema sirve para los 3 tipos de preguntas: texto libre, multiples respuestas o una sola respuesta.
 
 
 Validaciones
