@@ -20,9 +20,11 @@ Se crean tres modelos adicionales a User (Usuarios): Exam(Exámenes), Question(P
 Un(1) Exam puede tener muchas(N) Question
 Un(1) Question puede tener muchas(N) Answer
 
-Después se crean dos modelos para relacionar User(Usuarios) con Exam(Examen) y User(Usuarios) con Answer(Respuestas). Esto para se relacionen Muchos(N) a Muchas(N)
+Después se relaciona Examen con Usuario(UserExam) y Examen con Respuesta(UserAnswer) de forma muchos a muchos. Es decir que un Usuario puede tener asignado muchos Exámenes y Respuestas y viceversa. Un Examen puede tener muchos Usuarios y una Respuesta puede tener muchos Usuarios. De esta manera podemos saber y guardar todos las Respuestas del Usuario incluyendo las erróneas.  Con el campo "is_correct" sabremos si la Respuesta es la correcta. El campo "value" en (UserAnswer) se utiliza para las respuestas de texto libre así como si se decide utilizar otro tipos de campos como rellenar la respuesta correcta en un texto.
 
-Nota: Cuando el User(Usuarios) defina la Answer(Respuestas) define su respuesta en "value". Esto hace corroborar cual respuesta es correcta. Esta esquema sirve para los 3 tipos de preguntas: texto libre, multiples respuestas o una sola respuesta.
+En la clase Examen están las fechas(start/end) para definir cuándo se puede hacer el examen en general. Sin embargo también pueden ir en la clase UserExam y así definirlas a nivel de cada Usuario.
+
+Por último en la clase Pregunta(Question) están definidos el tipo de pregunta(type_of_question), si el Manager le va a asignar puntos(has_points) y cuántos puntos valdrá la Pregunta(points).
 
 
 Validaciones
